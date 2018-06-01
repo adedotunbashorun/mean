@@ -1,0 +1,71 @@
+<div class="">
+  <div *ngIf="Authenticated == false ">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#myPage">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a [routerLink]="['/']">Home</a></li>
+              <li><a [routerLink]="['/login']">Login</a></li>
+              <li><a [routerLink]="['/register']">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+        <router-outlet></router-outlet>
+      <div id="footer">
+          <p> &copy; Bezop 2018. All Rights Reserved.</p>
+      </div>
+  </div>
+  <div *ngIf="Authenticated == true">
+    <div class="option">
+      <div class="logo">
+          <div class="dashboto-logo">
+            <p>B</p>
+            <p>Z</p>
+          </div>
+          <p class="logo rog">Bezop</p>
+          <p class="logo">Dashboard</p>
+      </div>
+      <p class="tagline" style="color:#fefefe;">This is to upload file. <b>HODL</b></p>
+      <button class="main" [routerLink]="['/dashboard']">Bezop Dashboard</button>
+      <div class="clear"></div>
+        <ul class="menu">
+            <a [routerLink]="['/dashboard']">
+              <i class="fa fa-dashboard"></i>
+              Dashboard
+            </a>
+            <br>
+            <a [routerLink]="['/file-upload']">
+              <i class="fa fa-upload"></i>
+              Upload FIle
+            </a>
+            <a (click)="logout()">
+              <i class="fa fa-sign-out"></i>
+              Logout
+            </a>
+        </ul>
+    </div>
+
+
+    <div class="dashboard-heading">
+      <div class="panel">
+        <i class="fa fa-bell"><b>1</b></i>
+        <br/>
+        <p class="">{{ user_data.name }}</p>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+

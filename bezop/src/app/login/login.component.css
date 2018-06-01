@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 150px;
+    background-color: #EC7063;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#header {
+    padding-top: 10px;
+    background-color: #EC7063;
+}
+
+#header #align {
+    text-align: right;
+}
+
+#header a {
+    text-transform: uppercase;
+    color: #fefefe;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#header a:hover {
+    border-top: 2px solid white;
+    text-decoration: none;
+    color: #EC7063;
+    background-color: #fefefe;
+    transition: 0.6s;
+    border-bottom: 2px solid white;
+}
+
+
+/* .navbar {
+    margin-bottom: 0;
+    background-color: #EC7063;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+} */
+
+.jumbotron button {
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    border: none;
+    color: #F1948A;
+    font-size: 25px;
+    border-radius: 0;
+}
+
+.jumbotron button:hover {
+    background-color: unset;
+    width: 270px;
+    height: 100px;
+    color: white;
+    border: 3px solid white;
+    transition: 0.6s;
+}
+
+.jumbotron #arrow {
+    margin-top: 80px;
+    font-size: 30px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+}
+
+.jumbotron #arrow a {
+    color: white;
+}
+
+#center {}
+
+.content {
+    margin-top: 30px;
+}
+
+#login_div {
+    padding: 30px;
+    background-color: white;
+    color: #BFC9CA;
+}
+
+#login_div input {
+    height: 50px;
+}
+
+#login_div button {
+    height: 50px;
+    font-size: 16px;
+    background-color: #EC7063;
+    border: none;
+}

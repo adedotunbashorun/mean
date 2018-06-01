@@ -1,0 +1,34 @@
+  <div class="container" style="margin-top:100px;">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4" id="login_div">
+        <div *ngIf="msg !='' ">
+          <div class="alert alert-danger">{{ msg }}</div>
+        </div>
+        <div *ngIf="success !='' ">
+          <div class="alert alert-success">{{ success }}</div>
+        </div>
+        <h2 align="center" style="color: #EC7063;">Sign in</h2><hr/>
+          <form class="login-form" [formGroup]="loginForm">
+              <div class="form-group">
+                  <div class="form-group">
+                      <label class="control-label visible-ie8 visible-ie9">Email Address</label>
+                      <input formControlName="email" class="form-control form-control-solid placeholder-no-fix" type="email" autocomplete="off" placeholder="Email Address" name="email" value="" required autofocus/>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label visible-ie8 visible-ie9">Password</label>
+                  <input formControlName="password" class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" />
+              </div>
+              <div class="form-actions">
+                  <button type="button" (click)="login()" class="btn btn-primary form-control green uppercase">Login</button>
+              </div><br/>
+              <div class="form-actions">
+                  <div id="center">
+                    <a href="javascript:;" (click)="moveToRegister()" >Register</a>&nbsp;&nbsp;
+                    <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                  </div>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>

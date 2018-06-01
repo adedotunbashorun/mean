@@ -1,0 +1,36 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "mean stack app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "MEAN",
+    "stack"
+  ],
+  "author": "Adedotun Olawale Bashorun",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^6.0.3",
+    "bcrypt": "^2.0.1",
+    "bcrypt-nodejs": "0.0.3",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "filesaver": "0.0.13",
+    "mongoose": "^5.1.2",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "mysql": "^2.15.0",
+    "ng2-file-upload": "^1.3.0",
+    "nodemailer": "^4.6.5",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemon": "^1.17.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

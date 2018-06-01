@@ -1,0 +1,47 @@
+
+  <div class="all">
+    <div class="starter-stats">
+      <div class="col-md-12 card" style="background-color:#fefefe;">
+        <div class="col-md-12">
+          <h4>Upload File</h4>
+          <div id="fileselector">
+            <input type="file" name="fileupload" class="upload up" id="fileupload" multiple ng2FileSelect [uploader]="uploader"/>
+          </div>
+          <div>
+            <div class="row uploadlist" *ngFor="let item of uploader.queue" style="margin-top:10px;">
+              <div class="col-md-4">
+                {{ item.file.name }}
+              </div>
+              <div class="col-md-4">
+                <div class="progress">
+                  <div class="progress-bar bg-success" [ngStyle]="{'width': item.progress+'%'}">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <button type="button" class="btn btn-success" (click)="item.upload()">Upload</button>
+                <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+              </div>
+            </div>
+            <div class="row" *ngIf="uploader?.queue?.length > 0">
+              <button type="button" class="btn btn-success" (click)="uploader.uploadAll()">UploadAll</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 card" style="background-color:#fefefe; margin-top:50px;">
+          <h4>Download File</h4>
+          <div>
+            <div class="row uploadlist" *ngFor="let item of attachmentlist; let i = index" style="margin-top:10px;">
+              <div class="col-md-7">
+                {{ item.originalname }}
+              </div>
+              <div class="col-md-5">
+                <button type="button" class="btn btn-success" (click)="download(i)">Download</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
